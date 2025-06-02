@@ -1,0 +1,84 @@
+/* fonts */
+.jacquard-12-regular {
+  font-family: "Jacquard 12", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ibm-bios';
+  src: url("./assets/fonts/WebPlus_IBM_BIOS.woff") format('woff');
+}	
+
+.ibm-bios{
+	font-family: "ibm-bios";
+}
+
+/*-------------------------------*/
+.maincontent{
+  	width: 918px;/*808px;*/
+}
+
+.navlink{
+	color: #0C0C0C;
+	background-color: #F2F2F2;
+	text-decoration: none;
+	font-size: large;
+	padding: 0 10px 0 10px;
+}
+
+.navlinkdeactivated{
+	color: #F2F2F2;
+	background-color: #0c0c0c;
+	text-decoration: none;
+	font-size: large;
+	padding: 0 10px 0 10px;
+}
+
+.navlinkdeactivated:hover{
+	color: #0C0C0C;
+	background-color: #F2F2F2;
+}
+
+html{
+	background-color: #0C0C0C;
+	color: #CCCCCC;
+}
+
+header{
+	margin-left: -20px;
+}
+
+body {
+	margin-bottom: 10px;
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+  	text-align: left;  
+  	width: fit-content;
+
+	font-family: "ibm-bios";
+	font-size: 15px;
+}
+
+h1 {
+	font-size: 100px;
+	margin: 0 0 0 0;
+	color: #F2F2F2;
+}
+
+h2{
+	font-size: 18px;
+	margin: 45px 0 0 0;
+	color: #F2F2F2;
+}
+
+h3{
+	font-size: 15px;
+	margin: 30px 0 0 0;
+	color: #F2F2F2;
+}
+
+a{
+	color:#CCCCCC;
+}

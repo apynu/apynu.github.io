@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../../index.css">	
+	<link rel="stylesheet" type="text/css" href="./blogcss.css">
+	<script src="../../index.js"></script>
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Jacquard+12&display=swap');
+	</style>
+	<title>x86 vs x64</title>
+</head>
+<header>
+	<a class="navlinkdeactivated" href="/">ROOT</a>
+	<a class="navlink" href="/blog/">BLOG</a>
+	<a class="navlinkdeactivated" href="/contact/">CONTACT</a>
+</header>
+<body>
+	<div class="maincontent">
+        <h1 class="jacquard-12-regular"><b>x86 vs x64</b></h1>
+<p style="margin-top: 0px;">
+If you've ever worked with low-level code or even just compiled code you might have noticed the option to compile for x86 or x64 architecture. 
+Most know that x86 is 32-bit and x64 is 64-bit.
+But what does that even mean? What is x86-64?
+Welcome to the rabbit hole of instruction set architectures.
+</p>
+<h2>What is an instruction set architecture?</h2>
+<p>
+An instruction set architecture (ISA) basically defines how software talks with hardware.
+<br><br>
+Its kinda like this: if I want to talk to my friend in Japan and he doesn't speak English, I have to use Japanese.
+But if I want to talk to my friend in Great Britain, I have to use English.
+The same goes for software (me) and processors (my friends).
+<br><br>
+If the software wants to communicate with an Intel i5-12400, then it must use the x86-64 ISA.
+However, if the software wants to talk with an Apple M1 chip, then it must use the ARM ISA.
+The Intel i5 does not understand the ARM ISA and the Apple M1 does not understand the x86-64 ISA.
+<br><br>
+There are two main types of ISAs:
+
+<p>
+<a href="https://en.wikipedia.org/wiki/Complex_instruction_set_computer">1.CISC (Complex Instruction Set Computing) e.g. x86</a>
+</p>
+<p>
+<a href="https://en.wikipedia.org/wiki/Reduced_instruction_set_computer">2.RISC (Reduced Instruction Set Computing) e.g. ARM</a>
+</p>
+A little warning, I use the terms "ISA", "architecture", "sets" and "instruction set" interchangeably, just know that they all refer to the same thing. 
+Having cleared that up
+</p>
+<h2>What is the difference between 32-bit and 64-bit ISAs?</h2>
+<p>
+To understand the difference between x86 and x64 ISAs, its important to first understand the difference between 32-bit and 64-bit instruction sets.
+32-bit instruction sets can process data in 32-bit chunks, which limits how much memory (e.g. RAM) it can access, usually only up to 4GB.
+In contrast 64-bit systems, because they process data in 64-bit chunks, can theoretically access up to 16 exabytes (16.000.000.000GB) of memory, although practical limits are much lower (think 128GB - 18.4 mil TB on most windows systems).
+<br><br>
+Now that we know that
+</p>
+<h2>A little bit of history</h2>
+<p>
+Its important to understand what the names x86 and x64 actually refer to, before moving on to the differences.
+</p>
+<h3>Where does x86 come from?</h3>
+<p>
+It all started with the 8086, which was a processor using the 8086 ISA (a 16-bit instruction set with the same name as the chip) made by intel in 1978.
+This was later known as x86-16.
+The name really only emerged with the successors of the 8086, which had the naming convention 80x86.
+There was the 80186, 80286, 80386 and the 80486.
+This only lasted until the emergence of its successors, the 80x86 chips, the 80186, 80286, 80386 and the 80486.
+Although the 80386 was the first chip from intel using the IA-32 ISA or more commonly known the i386 ISA, a 32-bit architecture.
+<br><br>
+At this point x86 refers to both the 8086 (a 16-bit set) ISA and the IA-32 ISA.
+</p>
+<h3>Where does x64 come from?</h3>
+<p>
+Intel created the IA-64 ISA (Intel Itanium architecture), a 64-bit set.
+After that AMD created its own 64-bit set called the AMD64, which was backwards compatible with the IA-32 set and also basically only an extension of the x86 architecture called x86-64.
+That's where the name x64 came from, which doesn't refer to Intel's IA-64 ISA but rather also refers to Intel's later introduced Intel 64 architecture.
+<br><br>
+So x86 is simply an ambiguous term referring to all 32-bit instruction system architectures.
+In turn x64 is used to refer to almost all 64-bit architectures.
+</p>
+<h2>What is the difference between x86 and x64?</h2>
+<p>
+Having looked at the history and what x86 and x64 actually refer to, what is the difference between those two?
+</p>
+<h3>Backward compatibility</h3>
+<p>
+The x64 architecture is backwards compatible with the x86 architecture, because x86 dominated the processor market for quite a long time after x64 was introduced. This means that all 64-bit processors can run 32-bit applications.
+</p>
+<h3>Memory</h3> 
+<p>
+64-bit systems can handle more memory than 32-bit systems. As previously discussed a 32-bit system can handle up to 4GB of memory and a 64-bit system can practically handle up to 18.4 mil TB of memory.
+</p>
+<h3>Performance</h3>
+<p>
+Also because 64-bit CPUs can process 64-bits of data in a single cycle they are faster than 32-bit CPUs that can only handle 32-bits of data in a single cycle.
+</p>
+<h2>How does that effect developers?</h2>
+<p>
+Generally this doesn't effect you at all.<br>
+Unless of course you need to write architecture specific code, as a `long` in cpp has a different length on linux as on windows.
+But normally the average dev doesn't need to worry about that, and why? because compilers today are some of the most complex software ever written and handle a lot of stuff so we don't have to worry about it.
+</p>
+	<a class="navlink" href="/">END</a>
+</div>
+</body>
+</html>
