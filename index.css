@@ -1,8 +1,10 @@
 /* fonts */
-.jacquard-12-regular {
+.jacquard{
   font-family: "Jacquard 12", system-ui;
   font-weight: 400;
   font-style: normal;
+  font-size: 100px;
+  margin: 0;
 }
 
 @font-face {
@@ -21,6 +23,7 @@
 
 .navlink{
 	color: #0C0C0C;
+	/*color: #0037DA;*/
 	background-color: #F2F2F2;
 	text-decoration: none;
 	font-size: large;
@@ -29,7 +32,8 @@
 
 .navlinkdeactivated{
 	color: #F2F2F2;
-	background-color: #0c0c0c;
+	background-color: #0C0C0C;
+	/*background-color: #0037DA;*/
 	text-decoration: none;
 	font-size: large;
 	padding: 0 10px 0 10px;
@@ -37,11 +41,13 @@
 
 .navlinkdeactivated:hover{
 	color: #0C0C0C;
+	/*color: #0037DA;*/
 	background-color: #F2F2F2;
 }
 
 html{
 	background-color: #0C0C0C;
+	/*background-color: #0037DA;*/
 	color: #CCCCCC;
 }
 
@@ -55,21 +61,27 @@ body {
 	margin-left: auto;
 	margin-right: auto;
   	text-align: left;  
-  	width: fit-content;
+	width: fit-content;
 
 	font-family: "ibm-bios";
 	font-size: 15px;
 }
 
+ul{
+	list-style: none;
+	line-height: 24px;
+}
+
 h1 {
-	font-size: 100px;
-	margin: 0 0 0 0;
+	font-size: 50px;
+	margin: 30px 0 20px 0;
 	color: #F2F2F2;
 }
 
 h2{
 	font-size: 18px;
 	margin: 45px 0 0 0;
+	line-height: 25px;
 	color: #F2F2F2;
 }
 
@@ -77,8 +89,64 @@ h3{
 	font-size: 15px;
 	margin: 30px 0 0 0;
 	color: #F2F2F2;
+	line-height: 25px;
 }
 
 a{
 	color:#CCCCCC;
+}
+
+p{
+	line-height: 24px;
+}
+
+/*mobile*/
+@media screen and (max-width: 1000px) {
+	.maincontent{
+		width: fit-content;
+		margin-right: 10px;
+		margin-left: 10px;
+	}
+
+	.jacquard{
+		font-size: 70px;
+	}
+
+	header{
+		margin-left: 3px;
+		display: flex;
+	}
+
+	body{
+		line-break: loose;
+	}
+
+	h1{
+		font-size: 25px;
+		margin-top: 15px;
+		margin-bottom: 8px;
+	}
+
+	h2{
+		font-size: 15px;
+		margin-top: 30px;
+	}
+
+	h3{
+		font-size: 13px;
+		margin-top: 15px;
+		margin-bottom: -5px;
+	}
+
+	p{
+		font-size: 13px;
+		line-height: 18px;
+	}
+
+	ul{
+		font-size: 13px;
+		line-height: 18px;
+		margin-top: -5px;
+		margin-left: -15px;
+	}
 }
