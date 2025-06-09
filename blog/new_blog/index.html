@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../../index.css">	
+	<link rel="stylesheet" type="text/css" href="./blogcss.css">
+	<script src="../../index.js"></script>
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Jacquard+12&display=swap');
+	</style>
+	<title>new Blog();</title>
+</head>
+<header>
+	<a class="navlinkdeactivated" href="/">ROOT</a>
+	<a class="navlink" href="/blog/">BLOG</a>
+	<a class="navlinkdeactivated" href="/contact/">CONTACT</a>
+</header>
+<body class="ibm-bios">
+	<div class="maincontent">
+        	<h1>new Blog();</h1>
+		<p style="margin-top: 0px;">
+			I've made a new blog, but why am I writing an entire Post about it? you ask, well, this blog is kinda special.
+		</p>
+		<h2>Technical stuff</h2>
+		<p>
+			This blog uses some weird but fun tricks to enhance user experience.
+		</p>
+		<h3>LiveLoading</h3>
+		<p>
+			As you may have noticed, you can navigate this entire website without one complete page reload.
+			Some of you may know this as LiveLoading from, for example the Phoenix elixir framework, 
+			but then some of you may also notice that this site is hosted on <a href="">github pages</a>, 
+			which is a statice site hosting service, but using LiveLoading, which is commonly implemented using websockets, requires a webserver that you can control
+			and use frameworks that implement the LiveLoading feature.
+			Not having any of that but wanting LiveLoading, I needed to implement some super janky workaround.
+		</p>
+		<p>
+			LiveLoading basically gets data via a websockets and injects that into the DOM. So to imitate that, I'd just need to get some data via an
+			async connection and get it into the DOM. I looked around and found my inspiration at astros "!!!watering!!! islands", but instead of doing that to
+			only part of the website I would "!!water!!" the entire page.
+		</p>
+		<p>
+			I started writing a prototype that reads a html file and via the !!!HTMX!!! API I parsed the html and replaced the current head and body tags with
+			the parsed ones. Super janky, I know, but it works beautifully.
+		</p>
+		<h3>Bit-Font</h3>
+		<p>For many this might not be very interesting, but I did get asked how I got a Bit font to work once, so I think its a good idea to explain the font</p>
+		<p>
+			This is indeed not a bit font, because as of writing this, bit fonts are ignored by all modern browsers. The font I'm using is the "IBM-BIOS font as a 
+			normal .woff file. I found the font on <a href="">this</a> amazing website.
+		</p>
+		<h2>But why even make a new blog?</h2>
+		<p>
+			Besides having all these techincal upgrades that I've talked about above, my old blog was a template called <a href="">fuwari</a>,
+			which, being a template, didn't really represent what I wanted my page to look like. I did use the template under the excuse of
+			"I'm a systems dev I can't be bothered with web development". Though this eventually collapsed in on itself when I found
+			<a href="https://tmpout.sh/">tmpout.sh</a>, which is a website made by ELF hackers, so pretty much as close to the system as it gets, and
+			they've made an amazing looking page, so amazing in fact that I it was my main inspiration for this page (which you might've already noticed).
+		</p>
+		<p>
+			Another thing is of course, I love mystery, and with this very simple design I wanted to create a little piece of the old Internet,
+			that was still filled with so much mystery and less big cooperations and ads. You'll probably find a lot of really weird messages/easter eggs on here,
+			but beware, most aren't made by me, so please don't pay attention to glitches or moving text, the being that makes those doesn't pay rent and doesn't deserve attention.
+		</p>
+		<p>
+			Anyways, thats all from me,
+			<br>
+			Love you all <3
+			<br>
+			apy
+		</p>
+		<a class="navlink" href="/blog/">END</a>
+	</div>
+</body>
+</html>
